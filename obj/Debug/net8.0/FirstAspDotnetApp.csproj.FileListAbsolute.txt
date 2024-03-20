@@ -223,3 +223,4 @@ C:\Users\Utilisateur\source\repos\FirstAspDotnetApp\bin\Debug\net8.0\runtimes\wi
 C:\Users\Utilisateur\source\repos\FirstAspDotnetApp\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\Utilisateur\source\repos\FirstAspDotnetApp\obj\Debug\net8.0\FirstAspDotnetApp.csproj.AssemblyReference.cache
 C:\Users\Utilisateur\source\repos\FirstAspDotnetApp\obj\Debug\net8.0\FirstAsp.52A9F5FC.Up2Date
+C:\Users\Utilisateur\source\repos\FirstAspDotnetApp\obj\Debug\net8.0\FirstAspDotnetApp.sourcelink.json

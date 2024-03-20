@@ -1,3 +1,5 @@
+using FirstAspDotnetApp.Data;
+
 namespace FirstAspDotnetApp
 {
     public class Program
@@ -8,6 +10,7 @@ namespace FirstAspDotnetApp
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddScoped<AppData>();
 
             var app = builder.Build();
 

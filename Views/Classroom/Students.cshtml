@@ -1,8 +1,12 @@
-﻿
+﻿@model FirstAspDotnetApp.ViewModels.Classroom.StudentsViewModel
 @{
     ViewData["Title"] = "Students";
 }
 
-<h1>Students @ViewData["id"]</h1>
+<h1>Students of @Model.ClassroomName</h1>
 
+@foreach(Student student in Model.Students)
+{
+    <li>@student.Firstname @student.Lastname</li>
+}
 
