@@ -1,0 +1,9 @@
+﻿@model FirstAspDotnetApp.ViewModels.Error.UserFriendlyErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<h1>Une erreur s'est produite</h1>
+<div class="alert alert-@Model.Type">
+    <p class="mb-0">@Model.Message</p>
+</div>
