@@ -1,0 +1,10 @@
+﻿@model FirstAspDotnetApp.ViewModels.Classroom.NewViewModel
+
+<form asp-action="New" method="post">
+
+    <div class="form-group">
+        <input asp-for="@Model.NewClassroomForm.Name" class="form-control"/>
+    </div>
+
+    <input type="submit" value="Enregister" class="btn btn-primary" />
+</form>
