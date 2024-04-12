@@ -3,12 +3,52 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Classes</h1>
+<div class="container py-5">
+
+    <div class="row mb-4">
+        <div class="col">
+            <h1>Gestion des classes</h1>
+
+        </div>
+        <div class="col-auto">
+            <a asp-controller="Classroom" asp-action="New" class="btn btn-primary">Ajouter une classe</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th colspan="2">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var classroom in Model.Classrooms)
+                    {
+                        <tr>
+                            <td>@classroom.Id</td>
+                            <td>@classroom.Name</td>
+                            <td>
+                                <a  class="btn btn-outline-secondary">Modifier</a>
+                            </td>
+                            <td>
+                                <a asp-controller="Classroom" asp-action="Students" asp-route-id="@classroom.Id" class="btn btn-primary">Détails</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+
+
+            </table>
+        </div>
+    </div>
 
 <ul>
-    @foreach(var classroom in Model.Classrooms)
-    {
-        <li><a asp-controller="Classroom" asp-action="Students" asp-route-id="@classroom.Id">@classroom.Name</a></li>
-    }
+    
 </ul>
+</div>
 

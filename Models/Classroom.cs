@@ -1,7 +1,10 @@
-﻿namespace FirstAspDotnetApp.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace FirstAspDotnetApp.Models
 {
     public class Classroom
     {
+        [Key]
         public int Id { get; set; }
         public string? Name { get; set; }
 

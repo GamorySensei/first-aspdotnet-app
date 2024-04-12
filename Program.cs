@@ -10,7 +10,7 @@ namespace FirstAspDotnetApp
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddScoped<AppData>();
+            builder.Services.AddScoped<FirstAspDotNetAppDbContext>();
 
             var app = builder.Build();
 
