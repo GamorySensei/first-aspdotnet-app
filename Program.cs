@@ -1,4 +1,7 @@
 using FirstAspDotnetApp.Data;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using System.Configuration;
 
 namespace FirstAspDotnetApp
 {
@@ -7,6 +10,12 @@ namespace FirstAspDotnetApp
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            var connectionString = builder.Configuration.GetConnectionString("FirstAspDotNetAppDbContextConnection") ?? throw new InvalidOperationException("Connection string 'FirstAspDotNetAppDbContextConnection' not found.");
+
+            builder.Services.AddDbContext<FirstAspDotNetAppDbContext>(options => 
+            options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+
+            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<FirstAspDotNetAppDbContext>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
@@ -32,6 +41,8 @@ namespace FirstAspDotnetApp
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            app.MapRazorPages();
 
             app.Run();
         }

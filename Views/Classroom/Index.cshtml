@@ -33,7 +33,7 @@
                             <td>@classroom.Id</td>
                             <td>@classroom.Name</td>
                             <td>
-                                <a  class="btn btn-outline-secondary">Modifier</a>
+                                <a asp-action="Edit" asp-route-id="@classroom.Id" class="btn btn-outline-secondary">Modifier</a>
                             </td>
                             <td>
                                 <a asp-controller="Classroom" asp-action="Students" asp-route-id="@classroom.Id" class="btn btn-primary">Détails</a>

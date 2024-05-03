@@ -3,7 +3,9 @@
 <form asp-action="New" method="post">
 
     <div class="form-group">
+        <label asp-for="@Model.NewClassroomForm.Name"></label>
         <input asp-for="@Model.NewClassroomForm.Name" class="form-control"/>
+        <span asp-validation-for="@Model.NewClassroomForm.Name"></span>
     </div>
 
     <input type="submit" value="Enregister" class="btn btn-primary" />
