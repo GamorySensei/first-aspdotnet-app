@@ -1,0 +1,14 @@
+﻿@model FirstAspDotnetApp.ViewModels.Classroom.EditClassroomViewModel
+
+
+<form asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="@Model.EditClassroomForm.Id" />
+    <div class="form-group">
+        <label asp-for="@Model.EditClassroomForm.Name"></label>
+        <input asp-for="@Model.EditClassroomForm.Name" class="form-control" />
+        <span asp-validation-for="@Model.EditClassroomForm.Name"></span>
+    </div>
+
+    <input type="submit" value="Enregister" class="btn btn-primary" />
+</form>
