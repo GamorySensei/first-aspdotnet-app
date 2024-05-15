@@ -31,6 +31,11 @@ namespace FirstAspDotnetApp
                 app.UseHsts();
             }
 
+            if(app.Environment.IsProduction())
+            {
+                app.Services.GetService<FirstAspDotNetAppDbContext>().Database.Migrate();
+            }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
